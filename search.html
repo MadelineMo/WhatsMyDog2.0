@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Whats My Dog?</title>
+		<meta name="description" content="Let a computer help you figure out what breed your dog might be!">
+		<meta name="author" content="Madeline M">
+		<link href="style.css" rel="stylesheet" />
+		<div class="topnav">
+			<a href="home.html"><img src="HomeLogo.png" width="280" height="50"></a>
+			<ul>
+				<il><a href="home.html">Home</a></il>
+				<il><a href="popularDogBreeds.html">Popular</a></il>
+				<il><a class="active" href="search.html">Dog Breeds</a></il>
+				<il><a href="about.html">About</a></il>
+			</ul>
+		  </div>
+		<div style="padding:10px;margin-top:30px;background-color:#1e1e1e;height:30px;"></div> <!-- make sure the body doesnt start behind the nav bar-->
+	</head>
+	<body onload="showSlides();"> <!--load first slide when page starts -->
+		<!-- Slideshow container -->
+		<div class="slideshow-container">
+			<script type="text/javascript" src="slideshow.js"></script>
+			<!-- Full-width images -->
+			<div class="mySlides fade">
+			<img src="images/beagle.png" style="width:50%">
+			</div>
+		
+			<div class="mySlides fade">
+			<img src="images/bulldog.png" style="width:50%">
+			</div>
+		
+			<div class="mySlides fade">
+			<img src="images/dachshund.png" style="width:50%">
+			</div>
+
+			<div class="mySlides fade">
+			<img src="images/french-bulldog.png" style="width:50%">
+			</div>
+	
+			<div class="mySlides fade">
+			<img src="images/german-shepherd.png" style="width:50%">
+			</div>
+			
+			<div class="mySlides fade">
+			<img src="images/german-shorthaired-pointer.png" style="width:50%">
+			</div>
+
+			<div class="mySlides fade">
+			<img src="images/golden-retriever.png" style="width:50%">
+			</div>
+			
+			<div class="mySlides fade">
+			<img src="images/labrador-retriever.png" style="width:50%">
+			</div>
+			
+			<div class="mySlides fade">
+			<img src="images/poodle.png" style="width:50%">
+			</div>
+
+			<div class="mySlides fade">
+			<img src="images/rottweiler.png" style="width:50%">
+			</div>
+		</div>
+		<section class="content">
+			<div class="grid-container">
+				<a style="display:block" target="_blank" href="https://www.akc.org/dog-breeds/basset-hound/">
+					<article class="grid-item">
+						<div class="photos">
+							<img src="testImages/Basset.png">
+						</div>
+						<h3>Basset</h3>
+					</article> 
+				</a>
+				<a style="display:block" target="_blank" href="https://www.akc.org/dog-breeds/border-collie/">
+					<article class="grid-item">
+						<div class="photos">
+							<img src="testImages/Coolie.png">
+						</div>
+						<h3>Coolie</h3>
+					</article> 
+				</a>
+				<a style="display:block" target="_blank" href="https://www.akc.org/dog-breeds/american-eskimo-dog/">
+					<article class="grid-item">
+						<div class="photos">
+							<img src="testImages/Eskimo.png">
+						</div>
+						<h3>Eskimo</h3>
+					</article> 
+				</a>
+				<a style="display:block" target="_blank" href="https://www.akc.org/dog-breeds/havanese/">
+					<article class="grid-item">
+						<div class="photos">
+							<img src="testImages/Havanese.png">
+						</div>
+						<h3>Havanese</h3>
+					</article> 
+				</a>
+			</div>
+		</section>
+		<section class="pageEnd">
+			here is the end of the page
+		</section>
+	</body>
+</html>
