@@ -67,9 +67,12 @@
 			<h1>Welcome!</h1>
 			<p> The purpose of this website is to help you identify your dogs breed 
 				just from their photo. Please click the button below and upload your favorite photo:
-			</p>
-			<buttonGetDog class="buttonGetDog" onclick="query('testImages/Basset.png')">What's My Dog?</buttonGetDog>	
-			<h2> The value from test is: <span id="dogBreed">
+			</p>	
+			<form action="/action_page.php">
+				<buttonGetDog class="buttonGetDog" onclick="query('testImages/Basset.png')">What's My Dog?</buttonGetDog>
+				<br>
+				<input type="file" id="myFile" name="filename" style="margin: 20px;">
+			</form>
 			<!-- inspiration from: https://stackoverflow.com/questions/40858456/how-to-display-a-javascript-var-in-html-body -->
 			<p> Please note, not all dog breeds have been included in this program. 
 				The AI has been trained on the <href src="http://vision.stanford.edu/aditya86/ImageNetDogs/main.html">Stanford Dogs Dataset</href>

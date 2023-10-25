@@ -16,7 +16,7 @@ body {
   p {
     font-family: verdana;
     font-size: 16px;
-    text-align: left;
+    text-align: center;
     padding: 0px 80px;
   }
 
@@ -52,6 +52,18 @@ input[type=text]{
   font-size: large;
 }
 
+.search-container button{
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+.search-container button:hover {
+  background: #ccc;
+}
 
 .buttonGetDog { /* inspiration: https://www.w3schools.com/csS/css3_buttons.asp */
     background-color: #11CD86;
@@ -128,7 +140,7 @@ input[type=text]{
 /* Hide the images by default  */
 .mySlides {
   display: none;
-  width: 1350px;
+  width: 1250px;
   height: 500px;
   margin: 0 auto;
 }
@@ -160,7 +172,7 @@ input[type=text]{
 
 .grid-item {
   width: 350px;
-  height: 250px;
+  height: 200px;
   border-radius: 8px;
   margin: 12px 28px;
   border: solid;
@@ -176,6 +188,7 @@ input[type=text]{
 
 .grid-container a {
   color: #1e1e1e;
+  
 }
 
 .popularContainer {
