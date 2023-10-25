@@ -52,27 +52,6 @@ input[type=text]{
   font-size: large;
 }
 
-
-.buttonGetDog { /* inspiration: https://www.w3schools.com/csS/css3_buttons.asp */
-    background-color: #11CD86;
-    border: none;
-    color: black;
-    text-align: center;
-    display: inline-block;
-    font-size: 24px;
-    border-radius: 8px;
-    padding: 12px 28px;
-    transition-duration: 0.2s;
-  }
-  .buttonGetDog:hover {
-    background-color: #F4D602;
-    color: #1e1e1e;
-  }
-  .buttonGetDog:click {
-    background-color: #F70044;
-    color: #1e1e1e;
-  }
-
 /* navigation bar */
 /* originally from https://www.w3schools.com/howto/howto_js_topnav.asp as a template */
 /* Add a black background color to the top navigation */
@@ -100,6 +79,16 @@ input[type=text]{
     margin: 0 auto;
     padding: 14px;
   }
+  .topnav img {
+    float: left;
+    color: #fefefe;
+    text-align: center;
+    padding: 12px 16px;
+    text-decoration: none;
+    font-family: 'Trebuchet MS';
+    margin: 0 auto;
+    font-size: 24px;
+  }
   
   /* Change the color of links on hover */
   .topnav a:hover {
@@ -116,21 +105,21 @@ input[type=text]{
   
 /* slide show */
 /* oritionaly from: https://www.w3schools.com/howto/howto_js_slideshow.asp */
-
-* {box-sizing:border-box}
-
 /* Slideshow container */
 .slideshow-container {
   width: 100%;
   background-color: #3f3f49;
+  margin: 0 auto;
+  position: center;
 }
 
 /* Hide the images by default  */
 .mySlides {
   display: none;
-  width: 1350px;
-  height: 500px;
+  width: 800px;
+  height: 275px;
   margin: 0 auto;
+  position: center;
 }
 
 .mySlides img {
@@ -147,6 +136,28 @@ input[type=text]{
   from {opacity: .4}
   to {opacity: 1}
 }
+
+
+.buttonGetDog { /* inspiration: https://www.w3schools.com/csS/css3_buttons.asp */
+  background-color: #11CD86;
+  border: none;
+  color: black;
+  text-align: center;
+  display: inline-block;
+  font-size: 24px;
+  border-radius: 8px;
+  padding: 12px 28px;
+  transition-duration: 0.2s;
+}
+.buttonGetDog:hover {
+  background-color: #F4D602;
+  color: #1e1e1e;
+}
+.buttonGetDog:click {
+  background-color: #F70044;
+  color: #1e1e1e;
+}
+
 
 /* grid items */
 .grid-container { /* source: https://www.w3schools.com/css/css_grid.asp */
@@ -190,7 +201,7 @@ input[type=text]{
 
 .facts img {
   box-shadow: none;
-  width: 20px;
+  width: 200px;
   height: 20px;
   margin: 0 auto;
 }

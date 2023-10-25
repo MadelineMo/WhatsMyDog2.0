@@ -8,12 +8,12 @@
 		<meta name="author" content="Madeline M">
 		<link href="style.css" rel="stylesheet" />
 		<div class="topnav">
-			<a href="home.html"><img src="HomeLogo.png" width="280" height="50"></a>
+			<img src="HomeLogo.png" width="280" height="50">
 			<ul>
 				<il><a href="home.html">Home</a></il>
 				<il><a href="popularDogBreeds.html">Popular</a></il>
 				<il><a class="active" href="search.html">Dog Breeds</a></il>
-				<il><a href="about.html">About</a></il>
+				<il><a target="_blank" href="http://vision.stanford.edu/aditya86/ImageNetDogs/main.html">About</a></il>
 			</ul>
 		  </div>
 		<div style="padding:10px;margin-top:30px;background-color:#1e1e1e;height:30px;"></div> <!-- make sure the body doesnt start behind the nav bar-->
@@ -69,18 +69,26 @@
 				<input type="text" placeholder="Search..." name="search">
 			</form>
 		</div>
+		<!--main section of page-->
 		<section class="content">
+			<!--grid declaration-->
 			<div class="grid-container">
+				<!--one item of grid-->
 				<a style="display:block" target="_blank" href="https://www.akc.org/dog-breeds/affenpinscher/">
 					<article class="grid-item">
 						<div class="photos">
 							<img src="dogImages/Affenpinscher.png">
 						</div>
 						<h3>Affenpinscher</h3>
+						<!--temporary place holder for dog facts-->
+						<div class="temp">
+							<img href="icons.png">
+						</div>
+						<!--attempt at grid withing a grid for dog facts-->
 						<section class="icons">
 							<div class="facts">
-								<img href="search.png"><img href="search.png"><img href="search.png">
-								<p>Hair Age Weight</p>
+								<!--<img href="search.png"><img href="search.png"><img href="search.png">-->
+								<!--<p>Hair Age Weight</p>-->
 							</div>
 						</section>
 					</article> 
