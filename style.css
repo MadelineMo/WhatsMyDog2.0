@@ -176,6 +176,27 @@ input[type=text]{
 
 .grid-container a {
   color: #1e1e1e;
+  text-decoration: none;
+}
+
+.icons {
+  padding-top: 5px;
+  display: grid;
+  gap: 0px;
+  grid-template-columns: auto auto auto;
+  margin: 0 auto;
+  position: relative;
+}
+
+.facts img {
+  box-shadow: none;
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+}
+
+.facts p {
+  font-size: 10px ;
 }
 
 .popularContainer {
