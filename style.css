@@ -16,8 +16,8 @@ body {
   p {
     font-family: verdana;
     font-size: 16px;
-    text-align: left;
-    padding: 0px 80px;
+    text-align: center;
+    padding: 0px 60px;
   }
 
   h3 {
@@ -44,12 +44,6 @@ body {
 
 .search-container{
   float: center
-}
-
-input[type=text]{
-  width: 500px;
-  height: 50px;
-  font-size: large;
 }
 
 /* navigation bar */
@@ -92,7 +86,7 @@ input[type=text]{
   
   /* Change the color of links on hover */
   .topnav a:hover {
-    background-color: #11CD86; /* highlight color */
+    background-color: #F4D602; /* highlight color */
     color: black; /* text color */
   }
   
@@ -107,17 +101,15 @@ input[type=text]{
 /* oritionaly from: https://www.w3schools.com/howto/howto_js_slideshow.asp */
 /* Slideshow container */
 .slideshow-container {
-  width: 100%;
   background-color: #3f3f49;
   margin: 0 auto;
-  position: center;
 }
 
 /* Hide the images by default  */
 .mySlides {
   display: none;
-  width: 800px;
-  height: 275px;
+  width: 700px;
+  height: 500px;
   margin: 0 auto;
   position: center;
 }
@@ -137,11 +129,10 @@ input[type=text]{
   to {opacity: 1}
 }
 
-
-.buttonGetDog { /* inspiration: https://www.w3schools.com/csS/css3_buttons.asp */
-  background-color: #11CD86;
+input[type=button]{
+  background-color: #F70044;
   border: none;
-  color: black;
+  color: white;
   text-align: center;
   display: inline-block;
   font-size: 24px;
@@ -149,11 +140,11 @@ input[type=text]{
   padding: 12px 28px;
   transition-duration: 0.2s;
 }
-.buttonGetDog:hover {
+input[type=button]:hover {
   background-color: #F4D602;
   color: #1e1e1e;
 }
-.buttonGetDog:click {
+input[type=button]:click {
   background-color: #F70044;
   color: #1e1e1e;
 }
@@ -266,4 +257,11 @@ input[type=text]{
 
 .HomeLogo {
   padding: 20px 20px;
+}
+
+.pageEnd {
+  background-color: #3f3f49;
+  margin: 40px auto;
+  color: #fefefe;
+  padding-top: 40px;
 }

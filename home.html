@@ -23,43 +23,43 @@
 			<script type="text/javascript" src="slideshow.js"></script>
 			<!-- Full-width images -->
 			<div class="mySlides fade">
-			<img src="slideshowImages/beagle.png" style="width:50%">
+			<img src="slideshowImages/beagle.png">
 			</div>
 		
 			<div class="mySlides fade">
-			<img src="slideshowImages/bulldog.png" style="width:50%">
+			<img src="slideshowImages/bulldog.png">
 			</div>
 		
 			<div class="mySlides fade">
-			<img src="slideshowImages/dachshund.png" style="width:50%">
+			<img src="slideshowImages/dachshund.png">
 			</div>
 
 			<div class="mySlides fade">
-			<img src="slideshowImages/french-bulldog.png" style="width:50%">
+			<img src="slideshowImages/french-bulldog.png">
 			</div>
 	
 			<div class="mySlides fade">
-			<img src="slideshowImages/german-shepherd.png" style="width:50%">
+			<img src="slideshowImages/german-shepherd.png">
 			</div>
 			
 			<div class="mySlides fade">
-			<img src="slideshowImages/german-shorthaired-pointer.png" style="width:50%">
+			<img src="slideshowImages/german-shorthaired-pointer.png">
 			</div>
 
 			<div class="mySlides fade">
-			<img src="slideshowImages/golden-retriever.png" style="width:50%">
+			<img src="slideshowImages/golden-retriever.png">
 			</div>
 			
 			<div class="mySlides fade">
-			<img src="slideshowImages/labrador-retriever.png" style="width:50%">
+			<img src="slideshowImages/labrador-retriever.png">
 			</div>
 			
 			<div class="mySlides fade">
-			<img src="slideshowImages/poodle.png" style="width:50%">
+			<img src="slideshowImages/poodle.png">
 			</div>
 
 			<div class="mySlides fade">
-			<img src="slideshowImages/rottweiler.png" style="width:50%">
+			<img src="slideshowImages/rottweiler.png">
 			</div>
 		</div>
 		<section class="content">
@@ -67,17 +67,18 @@
 			<img class=HomeLogo src="HomeLogo.png" width="600" height="100">
 			<p> The purpose of this website is to help you identify your dogs breed 
 				just from their photo. Please click the button below and upload your favorite photo:
-			</p>	
-			<form action="/action_page.php">
-				<buttonGetDog class="buttonGetDog" onclick="query('testImages/Basset.png')">What's My Dog?</buttonGetDog>
+			 	<br>
 				<br>
-				<input type="file" id="myFile" name="filename" style="margin: 20px;">
+				Please note, not all dog breeds have been included in this program. 
+				The AI has been trained on the <href src="http://vision.stanford.edu/aditya86/ImageNetDogs/main.html" style="color: blue;">Stanford Dogs Dataset</href>
+				which contains pictures of 120 different breeds. You can find the full list of dog breeds int the search tab and more information about the data set in the About Tab. 
+			</p>
+			<form action="/action_page.js">
+				<input type="button" id="myFile" name="filename" value="Click Here!" style="margin: 20px;">
 			</form>
 			<!-- inspiration from: https://stackoverflow.com/questions/40858456/how-to-display-a-javascript-var-in-html-body -->
-			<p> Please note, not all dog breeds have been included in this program. 
-				The AI has been trained on the <href src="http://vision.stanford.edu/aditya86/ImageNetDogs/main.html">Stanford Dogs Dataset</href>
-				which contains pictures of 120 different breets. To see the full list of breeds,
-				please see the search tab. 
+			<p>
+				Tip: Its best to upload a full body solo photo of your dog like the ones in the slide show at the top of the page. 
 			</p>
 		</section>
 		<section class="pageEnd">
