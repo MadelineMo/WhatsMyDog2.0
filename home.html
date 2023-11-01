@@ -2,11 +2,15 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+		<!-- Title -->
+		<!-- Add icon? -->
 		<title>Whats My Dog?</title>
 		<meta name="description" content="Let a computer help you figure out what breed your dog might be!">
 		<meta name="author" content="Madeline M">
+		<!-- Styles -->
 		<link href="style.css" rel="stylesheet" />
 		<div class="topnav">
+			<!-- Navigation -->
 			<img src="HomeLogo.png" width="280" height="50">
 			<ul>
 				<il><a class="active" href="home.html">Home</a></il>
@@ -15,13 +19,14 @@
 				<il><a target="_blank" href="http://vision.stanford.edu/aditya86/ImageNetDogs/main.html">About</a></il>
 			</ul>
 		  </div>
-		<div style="padding:10px;margin-top:30px;background-color:#1e1e1e;height:30px;"></div> <!-- make sure the body doesnt start behind the nav bar-->
+		  <!-- make sure the body doesnt start behind the nav bar-->
+		<div style="padding:10px;margin-top:30px;background-color:#1e1e1e;height:30px;"></div> 
 	</head>
 	<body onload="showSlides();"> <!--load first slide when page starts -->
 		<!-- Slideshow container -->
 		<div class="slideshow-container">
 			<script type="text/javascript" src="slideshow.js"></script>
-			<!-- Full-width images -->
+			<!-- Load Images -->
 			<div class="mySlides fade">
 			<img src="slideshowImages/beagle.png">
 			</div>
@@ -62,8 +67,9 @@
 			<img src="slideshowImages/rottweiler.png">
 			</div>
 		</div>
+		<!-- Page Content -->
 		<section class="content">
-			<script type="text/javascript" src="getDog.js"></script>
+			<!-- Logo -->
 			<img class=HomeLogo src="HomeLogo.png" width="600" height="100">
 			<p> The purpose of this website is to help you identify your dogs breed 
 				just from their photo. Please click the button below and upload your favorite photo:
@@ -73,6 +79,7 @@
 				The AI has been trained on the <href src="http://vision.stanford.edu/aditya86/ImageNetDogs/main.html" style="color: blue;">Stanford Dogs Dataset</href>
 				which contains pictures of 120 different breeds. You can find the full list of dog breeds int the search tab and more information about the data set in the About Tab. 
 			</p>
+			<!-- Dog Identification Button -->
 			<form action="/action_page.js">
 				<input type="button" id="myFile" name="filename" value="Click Here!" style="margin: 20px;">
 			</form>
@@ -81,6 +88,7 @@
 				Tip: Its best to upload a full body solo photo of your dog like the ones in the slide show at the top of the page. 
 			</p>
 		</section>
+		<!-- Footer section - clean cut -->
 		<footer class="pageEnd">
 			here is the end of the page
 		</footer>
