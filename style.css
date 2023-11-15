@@ -217,7 +217,7 @@ footer {
   bottom: 0%;
 }
 
-/* serach function styles */
+/* search function styles */
 #textInput {
   background-position: 10px 12px;
   background-repeat: no-repeat;
@@ -235,7 +235,6 @@ footer {
   gap: 25px; /* source: https://www.w3schools.com/css/css_grid.asp */
   grid-template-columns: auto auto;
   max-width: 800px;
-  margin: 0 auto;
 }
 
 #dogList img {
@@ -249,7 +248,6 @@ footer {
   text-decoration: none;
   font-size: 18px;
   color: black;
-  display: block
 }
 
 #dogList li a:hover:not(.header) {
@@ -260,7 +258,6 @@ footer {
   width: 350px;
   height: 250px;
   border-radius: 8px;
-  margin: 12px 28px;
   border: solid;
   box-shadow: 10px 10px;
 }
