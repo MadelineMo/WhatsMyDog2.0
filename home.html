@@ -79,6 +79,11 @@
 				The AI has been trained on the <href src="http://vision.stanford.edu/aditya86/ImageNetDogs/main.html" style="color: blue;">Stanford Dogs Dataset</href>
 				which contains pictures of 120 different breeds. You can find the full list of dog breeds int the search tab and more information about the data set in the About Tab. 
 			</p>
+			<!--upload button-->
+			<div class="first"> <!--https://stackoverflow.com/questions/60203320/inserting-and-using-the-user-uploaded-image-in-html-and-javascript-->
+				<p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)"></p>
+				<p><img id="output" width="400" /></p>
+			</div>
 			<!-- Dog Identification Button -->
 			<form action="/action_page.js">
 				<input type="button" id="myFile" name="filename" value="Click Here!" style="margin: 20px;">
@@ -92,6 +97,12 @@
 		<footer class="pageEnd">
 			here is the end of the page
 		</footer>
+		<script>
+			var loadFile = function(event) {
+   				var image = document.getElementById('output');
+    			image.src = URL.createObjectURL(event.target.files[0]);
+    		};
+		</script>
 	</body>
 	
 </html>
