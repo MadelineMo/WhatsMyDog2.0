@@ -2,7 +2,7 @@
 body {
   background-color: #fefefe;
   text-align: center;
-  margin: 0px;
+  margin: 0px auto;
 }
 
 h1 {
@@ -38,7 +38,7 @@ h4 {
 }
 
 .content {
-max-width: 800px;
+max-width: 1150px;
 margin: 0 auto; /*https://stackoverflow.com/questions/2279295/page-will-not-align-center*/
 }
 
@@ -232,8 +232,8 @@ margin-bottom: 12px;
 list-style-type: none;
 padding-top: 20px;
 display: grid;
-gap: 25px; /* source: https://www.w3schools.com/css/css_grid.asp */
-grid-template-columns: auto auto;
+gap: 50px 25px; /* source: https://www.w3schools.com/css/css_grid.asp */
+grid-template-columns: auto auto auto;
 max-width: 800px;
 }
 
