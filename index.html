@@ -79,7 +79,7 @@
 				The AI has been trained on the <href src="http://vision.stanford.edu/aditya86/ImageNetDogs/main.html" style="color: blue;">Stanford Dogs Dataset</href>
 				which contains pictures of 120 different breeds. You can find the full list of dog breeds int the search tab and more information about the data set in the About Tab. 
 			</p>
-			<!--upload button-->
+			<!--upload button
 			<form method="POST" action="/image-upload" enctype="multipart/form-data">
 				<div>
 					<label>Upload Image Here: </label>
@@ -88,6 +88,15 @@
 				</div>
 				<div>
 					<input type="button" id="myFile" name="filename" value="Click Here!" style="margin: 20px;">
+				</div>
+			</form> -->
+			<form method="POST" action="/profile-upload-single" enctype="multipart/form-data">
+				<div>
+					<label>Upload profile picture</label>
+					<input type="file" name="profile-file" required/>
+				</div>
+				<div>
+					<input type="submit" value="Upload" />
 				</div>
 			</form>
 			<p>
