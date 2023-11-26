@@ -71,13 +71,14 @@
 		<section class="content">
 			<!-- Logo -->
 			<img class=HomeLogo src="HomeLogo.png" width="600" height="100">
+			<div class="note">
+				<p><b>Please Note:</b> not all dog breeds have been included in this program. 
+					The AI has been trained on the <href src="http://vision.stanford.edu/aditya86/ImageNetDogs/main.html" style="color: blue;">Stanford Dogs Dataset</href>
+					which contains pictures of 120 different breeds. You can find the full list of dog breeds int the search tab and more information about the data set in the About Tab. </p>
+			</div>
+			
 			<p> The purpose of this website is to help you identify your dogs breed 
 				just from their photo. Please click the button below and upload your favorite photo:
-			 	<br>
-				<br>
-				Please note, not all dog breeds have been included in this program. 
-				The AI has been trained on the <href src="http://vision.stanford.edu/aditya86/ImageNetDogs/main.html" style="color: blue;">Stanford Dogs Dataset</href>
-				which contains pictures of 120 different breeds. You can find the full list of dog breeds int the search tab and more information about the data set in the About Tab. 
 			</p>
 			<!--upload button
 			<form method="POST" action="/image-upload" enctype="multipart/form-data">
@@ -105,7 +106,11 @@
 		</section>
 		<!-- Footer section - clean cut -->
 		<footer class="pageEnd">
-			here is the end of the page
+			<a href="index.html">Home</a><br>
+			<a href="popularDogBreeds.html">Popular</a><br>
+			<a class="active" href="search.html">Dog Breeds</a><br>
+			<a target="_blank" href="http://vision.stanford.edu/aditya86/ImageNetDogs/main.html">About</a><br>
+			Website By Madeline M. Fall 2023
 		</footer>
 		<script>
 			var loadFile = function(event) {
@@ -114,5 +119,4 @@
     		};
 		</script>
 	</body>
-	
 </html>

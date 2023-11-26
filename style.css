@@ -56,12 +56,18 @@ footer {
   padding-top: 80px;
   bottom: 0%;
   font-family: 'Barlow Semi Condensed';
-  font-size: 26px;
+  font-size: 20px;
+  text-align: left;
 }
 
 footer a {
   color: #fefefe;
   line-height: 1.5;
+  text-decoration: none;
+}
+
+footer a:hover{
+  color: #11cd85;
 }
 
 .search-container{
@@ -180,7 +186,7 @@ input[type=button]:click {
 }
 
 .popularContainer {
-  padding-top: 20px;
+  padding-top: 40px;
   display: grid;
   gap: 35px;
   grid-template-columns: auto;
@@ -198,13 +204,13 @@ input[type=button]:click {
 }
 
 .popularItem {
-  max-width: 800px;
+  max-width: 700px;
   margin: 0 auto;
   border: solid;
   border-color: #1e1e1e;
   border-radius: 8px;
   border-width: 2px;
-  box-shadow: 20px 10px #3f3f49;
+  box-shadow: 20px 10px #1e1e1e;
 }
 
 .popularImage {
@@ -216,6 +222,11 @@ input[type=button]:click {
   box-shadow: 20px 20px #11cd85;
 }
 
+.headerContainer {
+  display: inline-block;
+  width: 100%
+}
+
 .popularHeading { /* header for popular dog cards */
   font-family: 'Barlow Semi Condensed';
   font-size: 40px;
@@ -225,10 +236,37 @@ input[type=button]:click {
   color:#fefefe;
   text-align: center;
   padding-top: 10px;
+  border-radius: 6px;
+  margin-right: 40px;
+  float: center;
+}
+
+.number { /* dog breed rank number */
+  font-family: 'Barlow Semi Condensed';
+  font-size: 40px;
+  width: 10%;
+  height: 60px;
+  background-color: #11CD86;
+  color:#fefefe;
+  border-radius: 6px;
+  text-align: center;
+  padding-top: 10px;
+  float: left;
+}
+
+.extra { /* make sure header isnt off set by number */
+  width: 10%;
+  height: 60px;
+  background-color: #056FA8;
+  border-radius: 6px;
+  padding-top: 10px;
+  float: right;
 }
 
 .popularText {
-  font-size: 16px;
+  font-size: 20px;
+  font-family: 'Barlow Semi Condensed';
+  margin: 15px;
 }
 
 .pageEnd {
@@ -315,13 +353,12 @@ input[type=button]:click {
 
 .note {
   width: 700px;
-  height: 75px;
   border-radius: 8px;
   border: solid;
   border-width: 4px;
   box-shadow: 10px 10px #f70046;
   margin: auto 0px;
-  padding-bottom: 40px;
   margin: 0px auto;
+  display: inline-block;
 }
 
