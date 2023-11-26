@@ -10,14 +10,16 @@ h1 {
   text-align: center;
   font-family: verdana;
   font-size: 80px;
-  margin:40px;
+  margin:20px;
 }
 
 p {
   font-family: verdana;
   font-size: 16px;
   text-align: center;
-  padding: 0px 60px;
+  padding: 0px 200px;
+  padding-bottom: 20px;
+  line-height: 1.5;
 }
 
 h3 { /* header for search screen cards */
@@ -38,12 +40,13 @@ h4 {
 }
 
 .content {
-  max-width: 1150px;
-  margin: 0 auto; /*https://stackoverflow.com/questions/2279295/page-will-not-align-center*/
+  margin: 0px auto; /*https://stackoverflow.com/questions/2279295/page-will-not-align-center*/
+  align-items: center;
+  
 }
 
 .search-container{
-  float: center
+  float: center;
 }
 
 /* navigation bar */
@@ -232,10 +235,12 @@ footer {
 #dogList {
   list-style-type: none;
   padding-top: 20px;
-  display: grid;
-  gap: 50px 25px; /* source: https://www.w3schools.com/css/css_grid.asp */
-  grid-template-columns: auto auto auto;
-  max-width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto 0px;
+  gap: 50px;
+  justify-content: space-around;
+  padding-right: 30px;
 }
 
 #dogList img {
@@ -257,10 +262,11 @@ footer {
 
 .grid-item {
   width: 350px;
-  height: 250px;
+  height: 270px;
   border-radius: 8px;
   border: solid;
-  box-shadow: 10px 10px;
+  box-shadow: 10px 10px #3f3f49;
+  margin: auto 0px;
 }
 
 /* cards test */
@@ -268,15 +274,15 @@ footer {
 .card_info{
   width: 350px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: left;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .card_header{
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: 10px;
+  padding-top: 20px;
   padding-bottom: 10px;
   display: flex;
   justify-content: space-between;
@@ -284,8 +290,6 @@ footer {
   font-size: 20px;
 }
 
-.card_info p2 {
-  margin: 0 auto;
-}
+
 
 
