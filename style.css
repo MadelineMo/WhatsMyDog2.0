@@ -14,14 +14,6 @@ h1 {
   margin:20px;
 }
 
-h2 { /* header for popular dog cards */
-  color: rgb(0, 0, 0);
-  text-align: center;
-  font-family: 'Barlow Semi Condensed';
-  font-size: 20px;
-  padding-top: 20px;
-}
-
 h3 { /* header for search screen cards */
   padding: 0px;
   margin: 0px;
@@ -212,7 +204,7 @@ input[type=button]:click {
   border-color: #1e1e1e;
   border-radius: 8px;
   border-width: 2px;
-  box-shadow: 20px 10px #11CD86;
+  box-shadow: 20px 10px #3f3f49;
 }
 
 .popularImage {
@@ -221,13 +213,18 @@ input[type=button]:click {
   border-radius: 8px;
   margin: 12px 28px;
   border: solid;
-  box-shadow: 20px 20px #056FA8;
+  box-shadow: 20px 20px #11cd85;
 }
 
-.popularHeading {
+.popularHeading { /* header for popular dog cards */
+  font-family: 'Barlow Semi Condensed';
+  font-size: 40px;
   width: 100%;
   height: 60px;
-  background-color: #3f3f49;
+  background-color: #056FA8;
+  color:#fefefe;
+  text-align: center;
+  padding-top: 10px;
 }
 
 .popularText {
