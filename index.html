@@ -77,11 +77,14 @@
 					The AI has been trained on the <href src="http://vision.stanford.edu/aditya86/ImageNetDogs/main.html" style="color: blue;">Stanford Dogs Dataset</href>
 					which contains pictures of 120 different breeds. You can find the full list of dog breeds int the search tab and more information about the data set in the About Tab. </p>
 			</div>
-			
-			<p> The purpose of this website is to help you identify your dogs breed 
-				just from their photo. Please click the button below and upload your favorite photo:
-			</p>
-			<!--upload button
+			<div class="homeHeading">
+				<h2>ID Your Dog!</h2>
+				<p>The purpose of this website is to help you identify your dogs breed 
+				just from their photo. Please click the button below and upload your favorite photo:</p>
+			</div>
+			<!--upload button and show on screen -->
+			<!--NEXT EDIT: hide upload button behind a desinged buton and merge it with submit function or pass file to submit button  -->
+			<!-- refer to: https://jsfiddle.net/sqm5puzs/ -->
 			<form method="POST" action="/image-upload" enctype="multipart/form-data">
 				<div>
 					<label>Upload Image Here: </label>
@@ -91,11 +94,11 @@
 				<div>
 					<input type="button" id="myFile" name="filename" value="Click Here!" style="margin: 20px;">
 				</div>
-			</form> -->
+			</form>
 			<form method="POST" action="/profile-upload-single" enctype="multipart/form-data">
-				<div>
-					<label>Upload profile picture</label>
-					<input type="file" name="profile-file" required/>
+				<label>Upload Dog Photo:</label>
+				<div class="input">
+					<input type="file" name="dog-photo" required/>
 				</div>
 				<div>
 					<input type="submit" value="Upload" />
