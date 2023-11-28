@@ -87,11 +87,9 @@
 			<!--upload button and show on screen -->
 			<!--NEXT EDIT: hide upload button behind a desinged buton and merge it with submit function or pass file to submit button  -->
 			<!-- refer to: https://jsfiddle.net/sqm5puzs/ -->
+			<!-- for some reason this form keeps everything center so I cant remove it-->
 			<form method="POST" action="/image-upload" enctype="multipart/form-data">
-				<div> <!--class="uploadButton">-->
-					<label>Upload Image Here</label>
-					<input type="file"  accept="image/*" name="dog-image" id="file"  class="upload" onchange="loadFile(event)">
-					<br>
+				<div></div>
 					<img id="dogPhoto" width="500px" class="dogPhoto"/>
 				</div>
 				<!--<div class="dogPhoto">
@@ -102,16 +100,18 @@
 				</div>-->
 			</form>
 			<form method="POST" action="/dog-upload" enctype="multipart/form-data">
-				<div>
-					<label>Upload dog picture</label>
-					<input type="file" name="profile-file" required/>
+				<div class="uploadButton">
+					<br>
+					<label><b>Get Dog Picture</b></label>
+					<input type="file" class="upload" name="profile-file" accept="image/*" name="dog-image" id="file"  class="upload" onchange="loadFile(event)" required/>
 				</div>
-				<div>
-					<input type="submit" value="Upload" />
+				<div class="submitButton">
+					<label><b>Submit Photo</b></label>
+					<input type="submit" value="Submit" class="submit" />
 				</div>
 			</form>
 			<p>
-				Tip: Its best to upload a full body solo photo of your dog like the ones in the slide show at the top of the page. 
+				Tip: Its best to upload a full body photo of your dog. 
 			</p>
 		</section>
 		<!-- Footer section - clean cut -->

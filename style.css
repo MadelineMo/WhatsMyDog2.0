@@ -210,7 +210,7 @@ input[type=button]:click {
   border-color:#056FA8;
 }
 
-/* hidden choose file button 
+/* hidden choose file button */
 .upload {
   position: absolute;
   z-index: 1000;
@@ -221,19 +221,17 @@ input[type=button]:click {
   height: 100%;
   font-size: 24px;
   width: 100%; 
-}*/
+}
 /* choose file button cover */
 .uploadButton {
-  padding:10px 10px;
-  background:#F70044;
+  background:#056FA8;
   position:relative;
   color:#fff;
   border-radius:2px;
-  text-align:center;
   cursor:pointer;
   width: 200px;
-  height: 30px;
-  margin: 0px auto;
+  height: 80px;
+  margin: 10px auto;
   font-family: 'Barlow Semi Condensed';
   font-size: 24px;
   border-radius: 8px;
@@ -260,9 +258,9 @@ input[type=button]:click {
 /* submit button cover */
 .submitButton {
   padding:10px 10px;
-  background:#11cd85;
+  background:#F70044;
   position:relative;
-  color:#1e1e1e;
+  color:#fff;
   border-radius:2px;
   text-align:center;
   cursor:pointer;
