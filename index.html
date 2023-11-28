@@ -72,11 +72,13 @@
 		<section class="content">
 			<!-- Logo -->
 			<img class=HomeLogo src="HomeLogo.png" width="600" height="100">
+			<br>
 			<div class="note">
 				<p><b>Please Note:</b> not all dog breeds have been included in this program. 
 					The AI has been trained on the <href src="http://vision.stanford.edu/aditya86/ImageNetDogs/main.html" style="color: blue;">Stanford Dogs Dataset</href>
 					which contains pictures of 120 different breeds. You can find the full list of dog breeds int the search tab and more information about the data set in the About Tab. </p>
 			</div>
+			<br>
 			<div class="homeHeading">
 				<h2>ID Your Dog!</h2>
 				<p>The purpose of this website is to help you identify your dogs breed 
@@ -86,19 +88,23 @@
 			<!--NEXT EDIT: hide upload button behind a desinged buton and merge it with submit function or pass file to submit button  -->
 			<!-- refer to: https://jsfiddle.net/sqm5puzs/ -->
 			<form method="POST" action="/image-upload" enctype="multipart/form-data">
-				<div>
-					<label>Upload Image Here: </label>
-					<p><input type="file"  accept="image/*" name="dog-image" id="file"  onchange="loadFile(event)"></p>
-					<p><img id="dogPhoto" width="400" /></p>
+				<div> <!--class="uploadButton">-->
+					<label>Upload Image Here</label>
+					<input type="file"  accept="image/*" name="dog-image" id="file"  class="upload" onchange="loadFile(event)">
+					<br>
+					<img id="dogPhoto" width="500px" class="dogPhoto"/>
 				</div>
-				<div>
+				<!--<div class="dogPhoto">
+					<img id="dogPhoto" width="500px"/>
+				</div>-->
+				<!--<div class="submitButton">
 					<input type="button" id="myFile" name="filename" value="Click Here!" style="margin: 20px;">
-				</div>
+				</div>-->
 			</form>
-			<form method="POST" action="/profile-upload-single" enctype="multipart/form-data">
-				<label>Upload Dog Photo:</label>
-				<div class="input">
-					<input type="file" name="dog-photo" required/>
+			<form method="POST" action="/dog-upload" enctype="multipart/form-data">
+				<div>
+					<label>Upload dog picture</label>
+					<input type="file" name="profile-file" required/>
 				</div>
 				<div>
 					<input type="submit" value="Upload" />
@@ -114,7 +120,7 @@
 			<a href="popularDogBreeds.html">Popular</a><br>
 			<a class="active" href="search.html">Dog Breeds</a><br>
 			<a target="_blank" href="http://vision.stanford.edu/aditya86/ImageNetDogs/main.html">About</a><br>
-			Website By Madeline M. Fall 2023
+			<a>Website By Madeline M. Fall 2023</a>
 		</footer>
 		<script>
 			var loadFile = function(event) {

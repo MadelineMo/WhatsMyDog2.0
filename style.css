@@ -203,7 +203,50 @@ input[type=button]:click {
   color: #1e1e1e;
 }
 
-.dog-photo {
+.dogPhoto {
+  width: 500px;
+  height: auto;
+  border: 2px;
+  border-color:#056FA8;
+}
+
+/* hidden choose file button 
+.upload {
+  position: absolute;
+  z-index: 1000;
+  opacity: 0;
+  cursor: pointer;
+  right: 0;
+  top: 0;
+  height: 100%;
+  font-size: 24px;
+  width: 100%; 
+}*/
+/* choose file button cover */
+.uploadButton {
+  padding:10px 10px;
+  background:#F70044;
+  position:relative;
+  color:#fff;
+  border-radius:2px;
+  text-align:center;
+  cursor:pointer;
+  width: 200px;
+  height: 30px;
+  margin: 0px auto;
+  font-family: 'Barlow Semi Condensed';
+  font-size: 24px;
+  border-radius: 8px;
+  transition-duration: 0.2s;
+}
+
+.uploadButton:hover {
+  background-color: #F4D602;
+  color: #1e1e1e;
+}
+
+/* hidden submit button */
+.submit{
   position: absolute;
   z-index: 1000;
   opacity: 0;
@@ -213,6 +256,28 @@ input[type=button]:click {
   height: 100%;
   font-size: 24px;
   width: 100%;
+}
+/* submit button cover */
+.submitButton {
+  padding:10px 10px;
+  background:#11cd85;
+  position:relative;
+  color:#1e1e1e;
+  border-radius:2px;
+  text-align:center;
+  cursor:pointer;
+  width: 200px;
+  height: 30px;
+  margin: 0px auto;
+  font-family: 'Barlow Semi Condensed';
+  font-size: 24px;
+  border-radius: 8px;
+  transition-duration: 0.2s;
+}
+
+.submitButton:hover {
+  background-color: #F4D602;
+  color: #1e1e1e;
 }
 
 .homeHeading {
@@ -312,6 +377,7 @@ input[type=button]:click {
 
 .HomeLogo {
   padding: 20px 20px;
+  position: relative center;
 }
 
 /*search page */
