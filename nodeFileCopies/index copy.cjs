@@ -22,7 +22,7 @@ var upload = multer({ storage: storage })
 async function query(filename) {
   const data = fs.readFileSync(filename);
   const response = await fetch(
-      "https://api-inference.huggingface.co/...",
+      "https://api-inference.huggingface.co/models/...",
       {
           headers: { Authorization: `Bearer ...` },
           method: "POST",
@@ -52,39 +52,57 @@ app.post('/dog-upload', upload.single('profile-file'), function (req, res, next)
     console.log(JSON.stringify(response))
     first = response[0]
     // if huggingface is loading... return error
-    if(first["label"]){
+    //if(first["label"]){
       result = first["label"]
       result = result.replace('"', '')
       console.log(result)
-    }else{
-      result = "error"
-    }
+    //}else{
+      //result = "error"
+    //}
     // return label number or error
     return JSON.stringify(result)
   });
   // dealing with promise variable
   // need to get name out of the promise 
   const label = Promise.resolve(returned)
+  let x;
   const name = label.then((value)=> {
     var name = labelToName(value.replaceAll('"', ''))
     x = name
     console.log("name:",name)
     return name
     });
-  var response = '<a href="/home/index.html">Home</a><br>'
   // wait 1 second to get promise value then proceed to return
   delay(1000).then(() => { //https://masteringjs.io/tutorials/fundamentals/wait-1-second-then
     console.log("delay 1 second")
-    response += '<h1 position="center">Files uploaded successfully.</h1>'
-    response += `<br><img src="${req.file.path}" width="500px" margin="0px auto"/><br>`
     console.log(name)
-    response += x
+    let sentence = `My name is ${ x }. Nice to meet you.`
+    console.log(sentence)
+    var response = `<!DOCTYPE html>`
+    response += `<html>`
+    response += `<head style="margin:0px auto;">`
+		response += `<meta charset="UTF-8">`
+		response += `<title>Whats My Dog?</title>`
+		response += `<div class="topnav" style="padding:20px;margin-top:30px;background-color:#1e1e1e;height:35px;margin:0px auto;position:center;">`
+    response += `<a class="active" href="/home" style="text-align: center;font-size: 30px;text-decoration: none;color: #fff;">Home</a>`
+    response += `</div>`
+    response += `</head>`
+    response += `<body style="margin:0px;position:center;">`
+    response += `<br>`
+    response += `<h1 style="text-align: center;">Dog Photo Analyzed:</h1>`
+    response += `<br>`
+    response += `<img class="newDog" src="${req.file.path}" style="margin:0px auto;width:50%;padding-left:25%;">`
+    response += `<br>`
+    response += `<p style="text-align: center; font-size:30px; margin: 0px;padding-top: 20px;">I am a ${ x }.<p>`
+    response += `<p style="text-align: center; font-size:30px; margin: 0px;">Nice to meet you!<p>`
+    response += `</body>`
+    response += `</html>`
     return res.send(response)
   });
 }) 
 
 
-app.listen(port,() => console.log(`Server running on port ${port}!`))
+app.listen(port,() => console.log(`Server running on http://localhost:${port}/home`))
 // all labels to dog names
 function labelToName(label) {
   var dogName = "Error"
