@@ -73,34 +73,41 @@
 			<!-- Logo -->
 			<img class=HomeLogo src="HomeLogo.png" width="600" height="100">
 			<br>
+			<!-- Note 1 about data set -->
 			<div class="note">
 				<p><b>Please Note:</b> not all dog breeds have been included in this program. 
 					The AI has been trained on the <href src="http://vision.stanford.edu/aditya86/ImageNetDogs/main.html" style="color: blue;">Stanford Dogs Dataset</href>
 					which contains pictures of 120 different breeds. You can find the full list of dog breeds int the search tab and more information about the data set in the About Tab. </p>
 			</div>
 			<br>
+			<!-- Note 2 about what to do  -->
 			<div class="homeHeading">
 				<h2>ID Your Dog!</h2>
 				<p>The purpose of this website is to help you identify your dogs breed 
 				just from their photo. Please click the button below and upload your favorite photo:</p>
 			</div>
 			<!--upload button and show on screen -->
-			<!--NEXT EDIT: hide upload button behind a desinged buton and merge it with submit function or pass file to submit button  -->
 			<!-- refer to: https://jsfiddle.net/sqm5puzs/ -->
 			<!-- for some reason this form keeps everything center so I cant remove it-->
 			<form method="POST" action="/image-upload" enctype="multipart/form-data">
 				<div></div>
+					<!-- show photo submitted by user -->
 					<img id="dogPhoto" width="500px" class="dogPhoto"/>
 				</div>
 			</form>
+			<!-- form to create POST request -->
 			<form method="POST" action="/dog-upload" enctype="multipart/form-data">
+				<!-- botton overlayed on top of normal upload button -->
 				<div class="uploadButton">
 					<br>
 					<label><b>Get Dog Picture</b></label>
+					<!-- normal hidden upload button -->
 					<input type="file" class="upload" name="profile-file" accept="image/*" name="dog-image" id="file"  class="upload" onchange="loadFile(event)" required/>
 				</div>
+				<!-- botton overlayed on top of normal submit button  -->
 				<div class="submitButton">
 					<label><b>Submit Photo</b></label>
+					<!-- normal hidden submit button -->
 					<input type="submit" value="Submit" class="submit" />
 				</div>
 			</form>
@@ -116,6 +123,7 @@
 			<a target="_blank" href="http://vision.stanford.edu/aditya86/ImageNetDogs/main.html">About</a><br>
 			<a>Website By Madeline M. Fall 2023</a>
 		</footer>
+		<!-- javascript to load and show the image a user uploads -->
 		<script>
 			var loadFile = function(event) {
    				var image = document.getElementById('dogPhoto');

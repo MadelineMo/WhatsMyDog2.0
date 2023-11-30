@@ -9,6 +9,7 @@ var port = 3000;
 
 var app = express()
 
+//store image sent by user
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
       cb(null, './uploads')
@@ -19,6 +20,7 @@ var storage = multer.diskStorage({
 })
 var upload = multer({ storage: storage })
 
+//query the AI algorithum with the photo and receive result
 async function query(filename) {
   const data = fs.readFileSync(filename);
   const response = await fetch(
@@ -33,46 +35,38 @@ async function query(filename) {
   return result;
 }
 
-/*
-app.use('/a',express.static('/b'));
-Above line would serve all files/folders inside of the 'b' directory
-And make them accessible through http://localhost:3000/a.
-*/
+//hosted directories
 app.use('/home',express.static(__dirname + '/WhatsMyDog2.0'));
 app.use('/uploads', express.static('uploads'));
 
+//wait for reply
 function delay(time) {
   return new Promise(resolve => setTimeout(resolve, time));
 }
 
-
+//when user sends a dog photo respond with a new page and result
 app.post('/dog-upload', upload.single('profile-file'), function (req, res, next) {
   // upload image to dog AI and get Label number
   var returned = query('./uploads/'+req.file.filename).then((response) => {
     console.log(JSON.stringify(response))
     first = response[0]
-    // if huggingface is loading... return error
-    //if(first["label"]){
       result = first["label"]
       result = result.replace('"', '')
       console.log(result)
-    //}else{
-      //result = "error"
-    //}
-    // return label number or error
     return JSON.stringify(result)
   });
-  // dealing with promise variable
-  // need to get name out of the promise 
+  //resolve promise to retrieve dog name
   const label = Promise.resolve(returned)
   let x;
   const name = label.then((value)=> {
+    //chage label number to dog breed name
     var name = labelToName(value.replaceAll('"', ''))
+    //save dog name
     x = name
     console.log("name:",name)
     return name
     });
-  // wait 1 second to get promise value then proceed to return
+  // wait 1 second to get promise value then proceed to building webpage
   delay(1000).then(() => { //https://masteringjs.io/tutorials/fundamentals/wait-1-second-then
     console.log("delay 1 second")
     console.log(name)
@@ -97,11 +91,12 @@ app.post('/dog-upload', upload.single('profile-file'), function (req, res, next)
     response += `<p style="text-align: center; font-size:30px; margin: 0px;">Nice to meet you!<p>`
     response += `</body>`
     response += `</html>`
+    //returns fully stylalized page with submitted dog image and name of dog breed 
     return res.send(response)
   });
 }) 
 
-
+//where the node server is running and hosts the website 
 app.listen(port,() => console.log(`Server running on http://localhost:${port}/home`))
 // all labels to dog names
 function labelToName(label) {

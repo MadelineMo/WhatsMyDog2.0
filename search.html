@@ -69,28 +69,36 @@
 			</div>
 		</div>
 		<h1>Search Dog Breeds</h1>
+		<!-- Note to expain page to user -->
 		<div class="note">
 			<p><b>Note:</b> The dog breeds listed below are a part of the Standford Dog Breed dataset used to train the Deep Learning Algorithum found on the home page. It is not an exhaustive list of all dog breeds.</p>
 		</div>
+		<!-- call serach fnunction to edit page as you serach -->
 		<div class="search-container">
 			<input type="text" id="textInput" onkeyup="searchFunction()" placeholder="Search for dogs.." title="Type in a Dog Breed">
 		</div>
-		<!--main section of page-->
+		<!-- main section of page -->
+		<!-- flex box -->
 		<section class="content">
 			<!--grid declaration-->
 			<!--one item of grid-->
 			<ul id="dogList">
+				<!-- list for search function -->
 				<li><a style="display:block" target="_blank" href="https://www.akc.org/dog-breeds/affenpinscher/">
 					<article class="grid-item">
 						<div class="photos">
+							<!-- image -->
 							<img src="dogImages/Affenpinscher.png">
 						</div>
+						<!-- dog name -->
 						<h3>Affenpinscher</h3>
+						<!-- first line -->
 						<div class="card_header">
 							<u>Height:</u>
 							<u>Weight:</u>
 							<u>Age:</u>
 						</div>
+						<!-- second line -->
 						<div class="card_info">
 							  <p2>11.5 Inches</p2>
 							  <p2>10 Pounds</p2>
@@ -98,6 +106,7 @@
 						</div>
 					</article> 
 				</a></li>
+				<!-- repeats -->
 				<li><a style="display:block" target="_blank" href="https://www.britannica.com/animal/African-hunting-dog">
 					<article class="grid-item">
 						<div class="photos">

@@ -181,28 +181,6 @@ footer a:hover{
 
 /* home page */
 /* look up dog button */
-input[type=button]{
-  background-color: #F70044;
-  border: none;
-  color: white;
-  text-align: center;
-  display: inline-block;
-  font-size: 24px;
-  border-radius: 8px;
-  padding: 12px 28px;
-  transition-duration: 0.2s;
-}
-
-input[type=button]:hover {
-  background-color: #F4D602;
-  color: #1e1e1e;
-}
-
-input[type=button]:click {
-  background-color: #F70044;
-  color: #1e1e1e;
-}
-
 .dogPhoto {
   width: 500px;
   height: auto;
@@ -222,7 +200,7 @@ input[type=button]:click {
   font-size: 24px;
   width: 100%; 
 }
-/* choose file button cover */
+/* shown choose file button cover */
 .uploadButton {
   background:#056FA8;
   position:relative;
@@ -255,7 +233,7 @@ input[type=button]:click {
   font-size: 24px;
   width: 100%;
 }
-/* submit button cover */
+/* shown submit button cover */
 .submitButton {
   padding:10px 10px;
   background:#F70044;
